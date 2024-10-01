@@ -1,0 +1,98 @@
+
+/* header */
+header {
+    
+    min-width: 100%;
+    padding: 0px 20px;
+    background-color: #1f1f1f;
+    color: #f1f1f1;
+}
+
+.titel-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    margin-left: auto;
+    padding: 0;
+}
+
+ul li {
+    margin-left: 20px;
+}
+
+.lijn {
+    height: 40px;
+    width: 2px;
+    background-color: #f1f1f1;
+}
+
+a {
+    color: #f1f1f1;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+
+/* hamburger menu */
+
+.hamburger {
+    display: none; /* Verberg het standaard, behalve op kleinere schermen */
+    flex-direction: column;
+    width: 30px;
+    height: 21px;
+    margin-left: auto;
+    cursor: pointer;
+}
+  
+
+  
+/* Menu voor desktop */
+.menu {
+display: flex;
+gap: 20px;
+}
+
+/* Verberg het menu standaard op kleine schermen */
+@media (max-width: 768px) {
+    .hamburger {
+      display: flex; /* Toon hamburger-icoon op kleine schermen */
+    }
+  
+    .menu {
+      display: none; /* Verberg het menu */
+      position: absolute;
+      top: 60px;
+      right: 0;
+      background-color: white;
+      flex-direction: column;
+      width: 100%;
+      align-items: center;
+      gap: 20px;
+    }
+  
+    .menu.open {
+      display: flex; /* Toon het menu wanneer de hamburger is geopend */
+    }
+  
+    .menu li {
+      padding: 10px 0;
+    }
+
+    .menu a {
+        color: #1f1f1f;
+        text-decoration: none;
+    }
+  }
+
