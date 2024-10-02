@@ -1,10 +1,10 @@
 
 /* header */
 header {
-    
+    position: fixed;
     min-width: 100%;
     padding: 0px 20px;
-    background-color: #1f1f1f;
+    background-color: #2b2b2b;
     color: #f1f1f1;
 }
 
@@ -33,7 +33,7 @@ ul li {
 }
 
 .lijn {
-    height: 40px;
+    height: 33px;
     width: 2px;
     background-color: #f1f1f1;
 }
@@ -41,7 +41,7 @@ ul li {
 a {
     color: #f1f1f1;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 
@@ -66,6 +66,11 @@ gap: 20px;
 
 /* Verberg het menu standaard op kleine schermen */
 @media (max-width: 768px) {
+
+    header {
+        position: fixed;
+    }
+
     .hamburger {
       display: flex; /* Toon hamburger-icoon op kleine schermen */
     }
@@ -75,7 +80,8 @@ gap: 20px;
       position: absolute;
       top: 60px;
       right: 0;
-      background-color: white;
+      background-color: #e8e8e8;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
       flex-direction: column;
       width: 100%;
       align-items: center;

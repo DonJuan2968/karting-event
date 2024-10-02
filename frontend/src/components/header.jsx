@@ -14,7 +14,7 @@ const Header = () => {
                 <div className="title-header-container">
                     <Link to="/">
                         <div className="titel-header">
-                            <img src="src/assets/go-kart.png" alt="go-kart" width={70} height={60}/>
+                            <img src="src/assets/go-kart.png" alt="go-kart" width={60} height={50}/>
                             <div className="lijn">
 
                             </div>
