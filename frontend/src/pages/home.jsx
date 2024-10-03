@@ -3,6 +3,9 @@
 // alle components
 import Header from "../components/header"
 import Hero from "../components/home/hero"
+import Info from "../components/home/info"
+import Prijzen from "../components/home/prijzen"
+import Line from "../components/home/line"
 
 //! niet zomaar veranderen
 
@@ -11,6 +14,9 @@ const  Home = () => {
         <div className="">
             <Header/>
             <Hero/>
+            <Info/>
+            <Prijzen/>
+            <Line/>
         </div>
     )
 }

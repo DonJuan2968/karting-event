@@ -1,0 +1,103 @@
+/* content container */
+.content-container {
+    margin: 5vh 0;
+    margin-bottom: 15vh;
+}
+
+/* titel */
+.title-container {
+text-align: left;
+margin: 5vh 10vw; 
+}
+
+.first-title {
+font-size: 14px;
+text-transform: uppercase;
+letter-spacing: 2px;
+margin-bottom: 10px;
+color: #b7b7b7;
+}
+
+.disclaimer {
+font-size: 12px;
+text-transform: uppercase;
+letter-spacing: 2px;
+color: #b7b7b7;
+margin: 0;
+margin-top: 0.5vh
+}
+
+@media (min-width: 640px) {
+    .first-title {
+    font-size: 18px;
+    }
+}
+
+.title-projects h2 {
+color: #2b2b2b ;
+font-weight: 900;
+font-size: 30px;
+margin: 0;
+}
+
+@media (max-width: 768px) {
+    .title-projects h2 {
+    font-size: 40px;
+    }
+}
+
+@media (min-width: 768px) {
+    .title-projects h2 {
+        font-size: 50px;
+    }
+}
+
+/* prijzen */
+.prijzen-container {
+    display: flex;
+    justify-content: center; /* Center the items horizontally */
+    align-items: flex-start; /* Align items at the start of the container */
+    margin: 0 auto; /* Center the container */
+    max-width: 800px; /* Adjust the width as needed */
+    gap: 20px; /* Space between cards */
+}
+
+.prijs-card {
+    margin-top: 10vh;
+    background-color: #e8e8e8; /* Light background for the card */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Inner spacing */
+    flex: 1; /* Allow cards to grow equally */
+    text-align: center; /* Center the text */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.prijs-card img {
+    width: 100%; /* Make the image responsive */
+    max-width: 150px; /* Limit the maximum width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners for the image */
+    margin-bottom: 10px; /* Space between the image and text */
+}
+
+.prijs-card h3 {
+    margin: 0; /* Remove default margin */
+    font-size: 24px; /* Adjust font size */
+    color: #030303;
+}
+
+.prijs-card p {
+    font-size: 18px; /* Font size for the price */
+    color: #2b2b2b; /* Price color */
+}
+
+@media (max-width: 768px) {
+    .prijzen-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .prijs-card {
+        margin-top: 3vh;
+    }
+}

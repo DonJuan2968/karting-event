@@ -6,6 +6,7 @@ header {
     padding: 0px 20px;
     background-color: #2b2b2b;
     color: #f1f1f1;
+    z-index: 2;
 }
 
 .titel-header {

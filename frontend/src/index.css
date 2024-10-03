@@ -5,10 +5,21 @@
   font-family: "poppins";
 }
 
+#root {
+  min-width: 100%;
+}
+
 body {
   min-height: 100vh;
   max-width: 100%;
   background-color: #f1f1f1;
 }
+
+.container {
+  margin-bottom: 10vh;
+}
+
+
+
 
 /*! niks veranderen */

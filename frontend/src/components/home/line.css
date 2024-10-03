@@ -1,0 +1,10 @@
+.custom-divider {
+    height: 2px; /* Dikte van de divider */
+    background-color: #b7b7b7; /* Kleur van de divider */
+    margin: 20px 0; /* Ruimte boven en onder de divider */
+    width: 100%; /* Breedte van de divider */
+    max-width: 80%; /* Max breedte om het in het midden te houden */
+    margin-left: auto; /* Zorgt ervoor dat de divider gecentreerd is */
+    margin-right: auto; /* Zorgt ervoor dat de divider gecentreerd is */
+    border-radius: 5px; /* Optionele afgeronde hoeken */
+}

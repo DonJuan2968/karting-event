@@ -58,6 +58,7 @@
   font-size: 24px; /* Pas de grootte aan naar wens */
   color: #f1f1f1; /* Maak het iets transparant voor een minimalistische uitstraling */
   animation: bounce 1.5s infinite; /* Voeg een bounce-effect toe */
+  z-index: 1;
 }
 
 @keyframes bounce {
@@ -81,7 +82,7 @@
 
   .hero-content {
     margin-left: 8vw;
-    margin-top: 35vh;
+    margin-top: 20vh;
   }
   
   .hero h2 {
