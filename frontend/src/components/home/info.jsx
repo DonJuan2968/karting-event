@@ -1,3 +1,7 @@
+// import voor animation
+import { motion, useAnimation } from 'framer-motion';
+import { useEffect, useRef } from 'react';
+
 // import css
 import './info.css';
 //import alle afbeeldingen
@@ -6,18 +10,49 @@ import info2 from '../../assets/info2.png';
 import info3 from '../../assets/info3.jpg'
 
 const Info = () => {
+  const controls = useAnimation();
+    const ref = useRef();
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                controls.start("visible");
+            }
+            });
+        },
+        {
+            threshold: 0.5,
+        }
+        );
+
+        observer.observe(ref.current);
+
+        return () => observer.disconnect();
+    }, [controls]);
+
   return (
     <>
     <div className="container">
       {/* Title */}
-      <div className="title-container">
+      <motion.div className="title-container"
+        ref={ref}
+        initial="hidden"
+        animate={controls}
+        variants={{
+          visible: { opacity: 1, x: 0 },
+          hidden: { opacity: 0, x: -50 },
+        }}
+        transition={{ duration: 1 }}
+      >
         <div className="first-title">
           <p>alle informatie die je nodig hebt</p>
         </div>
         <div className="title-projects">
             <h2>Info.</h2>
         </div>
-      </div>
+      </motion.div>
       <div className="center">
         {/* Info stuk 1 */}
         <section className="info-section">
