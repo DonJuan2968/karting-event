@@ -16,13 +16,13 @@
 }
 
 .hero h2 {
-  font-size: 28px;
+  font-size: 35px;
   font-weight: bolder;
   margin-bottom: 1vh;
 }
 
 .hero p {
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 400;
   margin-top: 0.3vh;
   color: #e3e3e3;
@@ -40,9 +40,10 @@
   text-align: center;
   text-decoration: none;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 20px;
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
   transition: background-color 0.3s ease;
+  width: 200px;
 }
   
 .hero-button:hover {

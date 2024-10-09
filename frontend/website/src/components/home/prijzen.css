@@ -11,7 +11,6 @@ margin: 5vh 10vw;
 }
 
 .first-title {
-font-size: 14px;
 text-transform: uppercase;
 letter-spacing: 2px;
 margin-bottom: 10px;
@@ -19,7 +18,6 @@ color: #b7b7b7;
 }
 
 .disclaimer {
-font-size: 12px;
 text-transform: uppercase;
 letter-spacing: 2px;
 color: #b7b7b7;
@@ -27,28 +25,16 @@ margin: 0;
 margin-top: 0.5vh
 }
 
-@media (min-width: 640px) {
-    .first-title {
-    font-size: 18px;
-    }
-}
 
 .title-projects h2 {
 color: #2b2b2b ;
 font-weight: 900;
-font-size: 30px;
 margin: 0;
 }
 
 @media (max-width: 768px) {
     .title-projects h2 {
     font-size: 40px;
-    }
-}
-
-@media (min-width: 768px) {
-    .title-projects h2 {
-        font-size: 50px;
     }
 }
 
@@ -101,3 +87,54 @@ margin: 0;
         margin-top: 3vh;
     }
 }
+
+
+@media (min-width: 1200px) {
+    .prijzen-container {
+        max-width: 60%;
+        gap: 40px;
+    }
+
+    .prijs-card {
+        max-width: 300px;
+    }
+
+    .prijs-card img {
+        max-width: 175px;
+    }
+
+    .prijs-card h3 {
+        font-size: 27px;
+    }
+
+    .prijs-card p {
+        font-size: 20px;
+    }
+
+}
+
+
+@media (min-width: 1600px) {
+    /* Additional styling for monitor */
+    .prijzen-container {
+        max-width: 70%;
+        gap: 50px;
+    }
+
+    .prijs-card {
+        max-width: 300px;
+    }
+
+    .prijs-card img {
+        max-width: 200px;
+    }
+
+    .prijs-card h3 {
+        font-size: 30px;
+    }
+
+    .prijs-card p {
+        font-size: 22px;
+    }
+}
+

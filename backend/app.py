@@ -1,27 +1,8 @@
-from flask import Flask
-from flask_sqlalchemy import SQLAlchemy
-from flask_migrate import Migrate
-from config.config import Config
+# app.py
 
-print('test -> ' + __name__)
+from app import create_app
 
-db = SQLAlchemy()
-migrate = Migrate()
-
-app = Flask(__name__)
-
-def create_app():
-    app.config.from_object(Config)
-
-    db.init_app(app)
-    migrate.init_app(app, db)
-
-    @app.route('/')
-    def home():
-        return "Hello, World!"
-
-    return app
+app = create_app()
 
 if __name__ == "__main__":
-    app = create_app()
     app.run(debug=True)

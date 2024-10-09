@@ -8,7 +8,8 @@
   .contact-section {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 225px;
     align-items: center;
     padding: 20px;
   }
@@ -16,7 +17,7 @@
   .info-card,
   .contact-form {
     flex: 1;
-    max-width: 45%;
+    max-width: 35%;
     min-width: 280px;
     background-color: #e8e8e8;
     padding: 20px;
@@ -68,6 +69,7 @@
     .contact-section {
       flex-direction: column-reverse;
       justify-content: center; /* Items centraal uitlijnen */
+      gap: 50px;
     }
   
     .info-card,
