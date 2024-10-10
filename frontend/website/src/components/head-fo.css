@@ -77,11 +77,11 @@ gap: 20px;
     }
 
     .hamburger {
-      display: flex; /* Toon hamburger-icoon op kleine schermen */
+      display: flex;
     }
   
     .menu {
-      display: none; /* Verberg het menu */
+      display: none; 
       position: absolute;
       top: 60px;
       right: 0;
@@ -94,7 +94,7 @@ gap: 20px;
     }
   
     .menu.open {
-      display: flex; /* Toon het menu wanneer de hamburger is geopend */
+      display: flex;
     }
   
     .menu li {
@@ -105,7 +105,71 @@ gap: 20px;
         color: #1f1f1f;
         text-decoration: none;
     }
+
+    .nav-menu {
+      display: none;
+    }
   }
+
+
+
+
+  /* Hamburger icon styling */
+
+/* Overlay menu */
+.overlay {
+  height: 0;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #2b2b2b;
+  overflow: hidden;
+  transition: 0.3s;
+  z-index: 1;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay-content a {
+  padding: 10px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #f1f1f1;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay-content a:hover {
+  color: #b7b7b7;
+}
+
+.closebtn {
+  position: absolute;
+  top: -1px;
+  right: 12px;
+  font-size: 40px;
+  color: #f1f1f1;
+  text-decoration: none;
+}
+
+.closebtn:hover {
+  color: #b7b7b7;
+}
+
+
+
+
+
+
+
+
 
 
 

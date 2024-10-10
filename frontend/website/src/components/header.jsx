@@ -24,6 +24,13 @@ const Header = () => {
                         </div>
                     </Link>
                 </div>
+
+                <ul className="nav-menu">
+                    <li><Link to="/inschrijven">Inschrijven</Link></li>
+                    <li><Link to="/teams">Teams</Link></li>
+                    <li><HashLink to="/#Contact">Contact</HashLink></li>
+                </ul>
+
                 <HamburgerMenu/>
             </nav>
         </header>
@@ -34,14 +41,20 @@ const Header = () => {
 function HamburgerMenu() {
     const [isOpen, setIsOpen] = useState(false);
 
-    const toggleMenu = () => {
-        setIsOpen(!isOpen);
+    const openNav = () => {
+        document.getElementById("myNav").style.height = "100%";
+        setIsOpen(true); // Zorg ervoor dat het menu geopend is
+    };
+
+    const closeNav = () => {
+        document.getElementById("myNav").style.height = "0%";
+        setIsOpen(false); // Zorg ervoor dat het menu gesloten is
     };
 
     return (
         <>
             {/* Hamburger icon */}
-            <div className="hamburger" onClick={toggleMenu}>
+            <div className="hamburger" onClick={openNav}>
             <svg width="50px" height="50px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M4 18L20 18" stroke="#f1f1f1" strokeWidth="2" strokeLinecap="round"/>
             <path d="M4 12L20 12" stroke="#f1f1f1" strokeWidth="2" strokeLinecap="round"/>
@@ -50,11 +63,14 @@ function HamburgerMenu() {
             </div>
 
             {/* Links die verschijnen in het hamburger-menu */}
-            <ul className={`menu ${isOpen ? 'open' : ''}`}>
-                <li><Link to="/inschrijven">Inschrijven</Link></li>
-                <li><Link to="/teams">Teams</Link></li>
-                <li><HashLink to="/#Contact">Contact</HashLink></li>
-            </ul>
+            <div id="myNav" className="overlay">
+                <a href="#" className="closebtn" onClick={closeNav}>&times;</a>
+                <div className="overlay-content">
+                    <Link to="/inschrijven" onClick={closeNav}>Inschrijven</Link>
+                    <Link to="/teams" onClick={closeNav}>Teams</Link>
+                    <HashLink to="/#Contact" onClick={closeNav}>Contact</HashLink>
+                </div>
+            </div>
         </>
     );
 }
