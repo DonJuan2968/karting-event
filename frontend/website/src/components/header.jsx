@@ -2,6 +2,9 @@ import { useState } from 'react';
 import { HashLink } from 'react-router-hash-link'; 
 import { Link } from 'react-router-dom';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCircleXmark } from '@fortawesome/free-regular-svg-icons';
+
 // import css
 import '../components/head-fo.css';
 
@@ -43,12 +46,12 @@ function HamburgerMenu() {
 
     const openNav = () => {
         document.getElementById("myNav").style.height = "100%";
-        setIsOpen(true); // Zorg ervoor dat het menu geopend is
+        setIsOpen(true); // Zorgt ervoor dat het menu geopend is
     };
 
     const closeNav = () => {
         document.getElementById("myNav").style.height = "0%";
-        setIsOpen(false); // Zorg ervoor dat het menu gesloten is
+        setIsOpen(false); // Zorgt ervoor dat het menu gesloten is
     };
 
     return (
@@ -64,7 +67,7 @@ function HamburgerMenu() {
 
             {/* Links die verschijnen in het hamburger-menu */}
             <div id="myNav" className="overlay">
-                <a href="#" className="closebtn" onClick={closeNav}>&times;</a>
+                <a className="closebtn" onClick={closeNav}><FontAwesomeIcon icon={faCircleXmark} /></a>
                 <div className="overlay-content">
                     <Link to="/inschrijven" onClick={closeNav}>Inschrijven</Link>
                     <Link to="/teams" onClick={closeNav}>Teams</Link>

@@ -133,8 +133,9 @@ gap: 20px;
   position: relative;
   top: 25%;
   width: 100%;
-  text-align: center;
+  text-align: left;
   margin-top: 30px;
+  margin-left: 26vw;
 }
 
 .overlay-content a {
@@ -152,9 +153,9 @@ gap: 20px;
 
 .closebtn {
   position: absolute;
-  top: -1px;
+  top: 9px;
   right: 12px;
-  font-size: 40px;
+  font-size: 30px;
   color: #f1f1f1;
   text-decoration: none;
 }
@@ -212,9 +213,14 @@ gap: 20px;
   }
   
   .footer-links a, .footer-socials a {
-    color: white;
+    color: #f1f1f1;
     text-decoration: none;
     font-size: 16px;
+  }
+
+  .footer-socials a {
+    font-size: 30px;
+    margin-right: 15px;
   }
   
   .footer-links a:hover, .footer-socials a:hover {

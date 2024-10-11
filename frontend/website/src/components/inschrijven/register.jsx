@@ -1,11 +1,14 @@
 import './register.css';
 import { useState } from 'react';
 
+import background from '../../assets/inbackground.png'
+
 const Register = () => {
     const [formData, setFormData] = useState({
         name: '',
         email: '',
-        leerlingnummer: '' // Voeg leerlingnummer toe aan de state
+        leerlingnummer: '',
+        honeypot: '' // Voeg hier het honeypot-veld toe
     });
 
     const [message, setMessage] = useState('');
@@ -27,7 +30,8 @@ const Register = () => {
                 body: JSON.stringify({
                     username: formData.name,
                     email: formData.email,
-                    leerlingnummer: formData.leerlingnummer, // Voeg leerlingnummer toe aan de body
+                    leerlingnummer: formData.leerlingnummer,
+                    honeypot: formData.honeypot, // Voeg het honeypot-veld toe aan de body
                 }),
             });
 
@@ -35,58 +39,82 @@ const Register = () => {
 
             if (response.ok) {
                 setMessage('Inschrijving succesvol!');
-                setFormData({ name: '', email: '', leerlingnummer: '' }); // Maak de invoervelden leeg
+                setFormData({ name: '', email: '', leerlingnummer: '', honeypot: '' }); // Reset ook honeypot
             } else {
                 setMessage(data.error || 'Er ging iets mis, probeer het opnieuw.');
             }
         } catch (error) {
-            setMessage('Fout bij het verbinden met de server.');
+            setMessage('Fout bij het verbinden met de server (komt van onze kant).');
         }
     };
 
     return (
-        <div className="container-form">
-            <form className="inschrijf-form" onSubmit={handleSubmit}>
-                <h2>Inschrijven</h2>
-                <div className="form-group">
-                    <label htmlFor="name">Naam:</label>
+        <>
+            <div className="container-form">
+                {/* Afbeelding aan de linkerkant */}
+                <div className="image-left">
+                    <img src={background} alt="Beschrijving afbeelding" />
+                </div>
+                
+                <div className="mobile">
+                    <div className={`message-container ${message ? 'visible' : ''}`}>
+                        {message && <p className="message">{message}</p>}
+                    </div>
+                </div>
+
+                {/* Formulier aan de rechterkant */}
+                <form className="inschrijf-form" onSubmit={handleSubmit}>
+                    <h2>Inschrijven</h2>
+                    <div className="form-group">
+                        <label htmlFor="name">Naam:</label>
+                        <input
+                            type="text"
+                            id="name"
+                            value={formData.name}
+                            onChange={handleInputChange}
+                            placeholder="Voer je naam in"
+                            required
+                        />
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="email">Email:</label>
+                        <input
+                            type="email"
+                            id="email"
+                            value={formData.email}
+                            onChange={handleInputChange}
+                            placeholder="Voer je (VISTA E-mail) in"
+                            required
+                        />
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="leerlingnummer">Leerlingnummer:</label>
+                        <input
+                            type="number"
+                            id="leerlingnummer"
+                            value={formData.leerlingnummer}
+                            onChange={handleInputChange}
+                            placeholder="Voer je leerlingnummer in"
+                            required
+                        />
+                    </div>
+                    {/* Honeypot veld - verborgen voor gebruikers */}
                     <input
                         type="text"
-                        id="name"
-                        value={formData.name}
+                        id="honeypot"
+                        value={formData.honeypot}
                         onChange={handleInputChange}
-                        placeholder="Voer je naam in"
-                        required
+                        style={{ display: 'none' }}
                     />
+                    <button type="submit" className="submit-btn">Inschrijven</button>
+                </form>
+            </div>
+            <div className="desktop">
+                <div className={`message-container ${message ? 'visible' : ''}`}>
+                    {message && <p className="message">{message}</p>}
                 </div>
-                <div className="form-group">
-                    <label htmlFor="email">Email:</label>
-                    <input
-                        type="email"
-                        id="email"
-                        value={formData.email}
-                        onChange={handleInputChange}
-                        placeholder="Voer je email in"
-                        required
-                    />
-                </div>
-                <div className="form-group">
-                    <label htmlFor="leerlingnummer">Leerlingnummer:</label>
-                    <input
-                        type="number"
-                        id="leerlingnummer"
-                        value={formData.leerlingnummer}
-                        onChange={handleInputChange}
-                        placeholder="Voer je leerlingnummer in"
-                        required
-                    />
-                </div>
-                <button type="submit" className="submit-btn">Inschrijven</button>
-                <div className="message">
-                  {message && <p className="message">{message}</p>}
-                </div>
-            </form>
-        </div>
+            </div>
+        </>
     );
 };
 
