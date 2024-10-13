@@ -72,7 +72,7 @@ const Register = () => {
                             id="name"
                             value={formData.name}
                             onChange={handleInputChange}
-                            placeholder="Voer je naam in"
+                            placeholder="Voer je (voor en achternaam) in"
                             required
                         />
                     </div>
