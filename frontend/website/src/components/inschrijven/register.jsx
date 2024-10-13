@@ -31,15 +31,15 @@ const Register = () => {
                     username: formData.name,
                     email: formData.email,
                     leerlingnummer: formData.leerlingnummer,
-                    honeypot: formData.honeypot, // Voeg het honeypot-veld toe aan de body
+                    honeypot: formData.honeypot,
                 }),
             });
 
             const data = await response.json();
 
             if (response.ok) {
-                setMessage('Inschrijving succesvol!');
-                setFormData({ name: '', email: '', leerlingnummer: '', honeypot: '' }); // Reset ook honeypot
+                setMessage('Inschrijving succesvol');
+                setFormData({ name: '', email: '', leerlingnummer: '', honeypot: '' });
             } else {
                 setMessage(data.error || 'Er ging iets mis, probeer het opnieuw.');
             }
@@ -98,7 +98,7 @@ const Register = () => {
                             required
                         />
                     </div>
-                    {/* Honeypot veld - verborgen voor gebruikers */}
+                    {/* Honeypot */}
                     <input
                         type="text"
                         id="honeypot"

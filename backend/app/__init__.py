@@ -10,14 +10,13 @@ def create_app():
     app.config.from_object(Config)
     db.init_app(app)
     
-    # Voeg CORS toe voor de hele app
     CORS(app, resources={r"/*": {"origins": "http://localhost:5173"}}) 
 
-    # Importeer routes hier om circulaire import te voorkomen
+    # Importeert routes
     with app.app_context():
-        from app.models import User  # Verplaats dit hierheen
-        from app.routes import main  # Zorg ervoor dat je de routes importeert
+        from app.routes import main
+        
 
-        app.register_blueprint(main)  # Registreer de blueprint
-
+        app.register_blueprint(main)
+    
     return app
