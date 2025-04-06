@@ -245,14 +245,6 @@ karting-event/
 - Gebruik `npm run preview` om productie builds te testen
 - Gebruik `npm run lint` voor code kwaliteitscontrole
 
-## Bijdragen
-
-1. Fork de repository
-2. Maak een feature branch
-3. Commit je wijzigingen
-4. Push naar de branch
-5. Maak een Pull Request
-
 ## Licentie
 
 Dit project is gelicenseerd onder de MIT Licentie - zie het LICENSE bestand voor details.
