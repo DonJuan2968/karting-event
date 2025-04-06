@@ -247,4 +247,15 @@ karting-event/
 
 ## Licentie
 
-Dit project is gelicenseerd onder de MIT Licentie - zie het LICENSE bestand voor details.
+Dit project is een portfolio demonstratie en is alleen bedoeld voor educatieve en demonstratiedoeleinden. Het project mag bekeken en lokaal gebruikt worden, maar niet gedeeld, gepubliceerd of commercieel gebruikt worden. Zie het [LICENSE](LICENSE) bestand voor de volledige voorwaarden.
+
+### Toegestaan gebruik
+
+- Het project bekijken en bestuderen
+- Het project lokaal draaien voor demonstratiedoeleinden
+
+### Niet toegestaan
+
+- Het project publiceren of delen
+- Het project in productie gebruiken
+- Het project commercieel exploiteren
