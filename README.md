@@ -10,6 +10,41 @@ Dit project bestaat uit drie hoofdonderdelen:
 2. Frontend Website (React/Vite)
 3. Frontend Admin Panel (React/Vite)
 
+## Preview
+
+### Landing Page
+
+![Landing Page](docs/screenshots/landing.png)
+De landing page verwelkomt studenten met informatie over het karting evenement dat plaatsvindt op 18/10/2024 bij Powerarea in Lemiers Vaals.
+
+### Event Informatie
+
+![Event Info](docs/screenshots/info.png)
+Gedetailleerde informatie over locatie, datum, teams en wedstrijdformat. Teams bestaan uit 4 personen met random indeling.
+
+### Prijzen
+
+![Prijzen](docs/screenshots/prizes.png)
+Prijzen voor de top 3:
+
+- 1e plaats: €100,-
+- 2e plaats: €50,-
+- 3e plaats: €25,-
+
+### Inschrijfformulier
+
+![Registratie](docs/screenshots/register.png)
+Gebruiksvriendelijk inschrijfformulier met validatie voor:
+
+- Naam
+- VISTA College e-mailadres
+- 6-cijferig leerlingnummer
+
+### Teams Overzicht
+
+![Teams](docs/screenshots/teams.png)
+Real-time overzicht van alle gevormde teams met zoekfunctionaliteit.
+
 ## Functionaliteiten
 
 ### Algemeen
