@@ -24,7 +24,7 @@ Gedetailleerde informatie over locatie, datum, teams en wedstrijdformat. Teams b
 
 ### Prijzen
 
-![Prijzen](docs/screenshots/prizes.png)
+![Prijzen](docs/screenshots/prijzen.png)
 Prijzen voor de top 3:
 
 - 1e plaats: €100,-
@@ -33,7 +33,7 @@ Prijzen voor de top 3:
 
 ### Inschrijfformulier
 
-![Registratie](docs/screenshots/register.png)
+![Registratie](docs/screenshots/inschrijven.png)
 Gebruiksvriendelijk inschrijfformulier met validatie voor:
 
 - Naam
@@ -42,7 +42,7 @@ Gebruiksvriendelijk inschrijfformulier met validatie voor:
 
 ### Teams Overzicht
 
-![Teams](docs/screenshots/teams.png)
+![Teams](docs/screenshots/teams_voorbeeld.png)
 Real-time overzicht van alle gevormde teams met zoekfunctionaliteit.
 
 ## Functionaliteiten
