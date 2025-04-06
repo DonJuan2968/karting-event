@@ -43,7 +43,7 @@ Gebruiksvriendelijk inschrijfformulier met validatie voor:
 ### Teams Overzicht
 
 ![Teams](docs/screenshots/teams_voorbeeld.png)
-Real-time overzicht van alle gevormde teams met zoekfunctionaliteit.
+Overzicht van alle gevormde teams met zoekfunctionaliteit.
 
 ## Functionaliteiten
 
@@ -64,7 +64,7 @@ Real-time overzicht van alle gevormde teams met zoekfunctionaliteit.
 ### Frontend Website
 
 - Gebruiksvriendelijk registratieformulier
-- Real-time team overzicht
+- Team overzicht
 - Responsive design
 - API integratie
 
