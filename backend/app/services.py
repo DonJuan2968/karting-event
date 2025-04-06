@@ -8,15 +8,14 @@ def create_teams():
     # Gebruik user_id om leden op te halen
     participant_ids = [user.user_id for user in participants]
     # Willekeurige volgorde van deelnemers
-    random.shuffle(participant_ids)
-    
+    random.shuffle(participant_ids)    
     for participant_id in participant_ids:
         # Zoek willekeurig een team met minder dan 4 leden
         teams_with_space = (db.session.query(Teams)
-                            .join(TeamMembers)
-                            .group_by(Teams.team_id)
-                            .having(db.func.count(TeamMembers.member_id) < 4)
-                            .all())
+            .join(TeamMembers)
+            .group_by(Teams.team_id)
+            .having(db.func.count(TeamMembers.member_id) < 4)
+            .all())
         
         if teams_with_space:
             # Kies willekeurig een team dat nog ruimte heeft

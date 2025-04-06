@@ -62,7 +62,9 @@ const Info = () => {
             </div>
             <div className="info-text">
               <h2>Locatie</h2>
-              <p>Powerarea - Mamelis 1, Lemiers Vaals. Een moderne kartbaan met uitdagende indoor en outdoor tracks.</p>
+              <p>Powerarea - Mamelis 1, Lemiers Vaals.</p>
+              <h2>Datum</h2>
+              <p>18 oktober 2024</p>
               <h2>Teams en Wedstrijden</h2>
               <p>Teams van 4 personen (random indeling).</p>
               <p>Er is een opwarmings ronde en kwalificatie ronde, daarna volgt de "Grand Prix".</p>

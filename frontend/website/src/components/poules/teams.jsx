@@ -13,7 +13,7 @@ const Teams = () => {
   useEffect(() => {
     const fetchTeams = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/teams');
+        const response = await axios.get('http://localhost:5000/api/teams');
         setTeams(response.data);
         setFilteredTeams(response.data); // Initialize filtered teams with all teams
       } catch (error) {

@@ -1,0 +1,196 @@
+.content-home-container {
+    min-height: 120vh;
+    margin-top: 10vh;
+    width: 100%;
+}
+
+.home-titel {
+    text-align: left;
+    margin-bottom: 5vh;
+    font-size: 25px;
+    font-weight: 700;
+    color: #2b2b2b;
+}
+
+.data-container {
+    display: flex;
+    gap: 2vw;
+    color: #2b2b2b;
+}
+
+.inschrijf-container, .teams-container {
+    min-width: 400px;
+    max-width: 400px;
+    padding: 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    background-color: #e8e8e8;
+}
+
+.links-data-container {
+    text-decoration: none;
+    color: #2b2b2b;
+}
+
+.inschrijf-container:hover, .teams-container:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.inschrijf-container, .teams-container, .count-container {
+    border-radius: 15px;
+    border: solid 2px #2b2b2b;
+}
+
+.inschrijf-container h2, .teams-container h2 {
+    font-size: 24px;
+}
+
+.count-container {
+    min-width: 100px;
+    max-width: 35%;
+    min-height: 100px;
+    margin-top: 2.5vh;
+    padding: 20px;
+    background-color: #f1f1f1;
+}
+
+.count {
+    text-align: center;
+    font-size: 50px;
+    font-weight: 500;
+    color: #2b2b2b;
+}
+
+.home-titel2 {
+    text-align: left;
+    margin-top: 6vh;
+    font-size: 25px;
+    font-weight: 700;
+    color: #2b2b2b;
+}
+
+.berichten-container {
+    display: grid;
+    grid-template-columns: repeat(2 , minmax(600px, 1fr));
+    gap: 20px;
+    min-width: 99%;
+    max-width: 99%;
+    margin-top: 3vh;
+    padding: 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    background-color: #f1f1f1;
+    border-radius: 15px;
+    border: solid 2px #2b2b2b;
+    overflow-y: scroll;
+    height: 50vh;
+    max-height: 50vh;
+    box-sizing: border-box;
+    position: relative;
+}
+
+/* Scrollbar styling */
+.berichten-container::-webkit-scrollbar {
+    width: 8px;
+}
+  
+.berichten-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+  
+.berichten-container::-webkit-scrollbar-thumb {
+    background-color: #2b2b2b;
+    border-radius: 10px;
+    border: 2px solid #e8e8e8;
+}
+  
+.berichten-container::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+.bericht-item {
+    min-width: 300px;
+    max-width: 625px;
+    background-color: #e8e8e8;
+    max-height: fit-content;
+    padding: 10px;
+    border-radius: 15px;
+    border: solid 1px #2b2b2b;
+    position: relative;
+}
+
+.bericht-titel-container {
+    display: flex;
+    gap: 20px;
+    padding-left: 10px;
+    font-size: 15px;
+}
+
+.bericht-titel-container button {
+    margin-left: auto;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #2b2b2b;
+    font-size: 19px;
+    cursor: pointer;
+}
+
+.bericht-titel-container button:hover {
+    color: #b7b7b7;
+}
+
+.bericht-container {
+    font-size: 15px;
+    min-width: fit-content;
+    background-color: #f1f1f1;
+    padding: 10px;
+    border-radius: 15px;
+    border: solid 1px #2b2b2b;
+}
+
+@media screen and (min-width: 1200px) {
+    .berichten-container {
+        grid-template-columns: repeat(2 , minmax(300px, 1fr));
+    }
+
+    .bericht-item {
+        min-width: 250px;
+        max-width: 500px;
+        padding: 5px;
+        margin-bottom: 5px;
+    }
+}
+
+
+@media screen and (min-width: 1600px) {
+    .bericht-item {
+        min-width: 500px;
+        max-width: 650px;
+        padding: 5px;
+        margin-bottom: 5px;
+    }
+}
+
+
+@media screen and (max-width: 1200px) {
+    .berichten-container {
+        grid-template-columns: repeat(1 , minmax(200px, 1fr));
+    }
+}
+
+@media screen and (max-width: 1066px) {
+    .data-container {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .inschrijf-container, .teams-container {
+        min-width: 70%;
+        max-width: 100%;
+    }
+}
+
+

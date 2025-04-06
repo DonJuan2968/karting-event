@@ -22,7 +22,6 @@
   outline-color: #ccc;
   width: 100%;
   max-width: 400px;
-  text-align: center;
 }
 
 
@@ -30,9 +29,9 @@
 .teams-grid {
   display: grid;
   grid-template-columns: repeat( 3, minmax(400px, 1fr));
-  gap: 20px;
+  gap: 50px 0;
   margin-top: 20px;
-  margin-left: 2.7vw;
+  margin-left: 5vw;
 }
 
 /* Styling for individual team cards */
@@ -42,14 +41,14 @@
   padding: 20px;
   border-radius: 25px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-
+  
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  text-align: left;
   height: 100%;
-  max-width: 430px;
-  min-width:400px;
+  max-width: 400px;
+  min-width:350px;
 }
 
 .team-card h3 {
@@ -62,16 +61,18 @@
   list-style-type: none;
   padding: 0;
   margin: 0;
+  flex-direction: column;
 }
 
 .team-card li {
   margin-bottom: 10px;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.5;
   overflow-wrap: break-word;
   word-wrap: break-word;
   hyphens: auto;
   max-width: 100%;
+  margin-left: 0;
 }
 
 /* Responsive mobile */
@@ -79,8 +80,8 @@
   .teams-grid {
     grid-template-columns: repeat(1, 1fr);
     justify-content: center;
-    align-items: center;
     margin: auto 8vw;
+    gap: 20px 0;
   }
 
   .team-card {
@@ -89,12 +90,12 @@
     border-radius: 25px;
     width: 60%;
     max-width: 60%;
-    text-align: center;
+    text-align: left;
   }
 
   .team-card h3 {
     font-size: 20px;
-    text-align: center;
+    text-align: left;
 
   }
 
@@ -111,7 +112,7 @@
   .team-card li {
     display: block;
     width: 90%;
-    text-align: center;
+    text-align: left;
   }
 }
 
@@ -126,7 +127,7 @@
 @media (min-width: 1600px) {
   .teams-grid {
     grid-template-columns: repeat(3, 1fr);
-    margin-left: 6.9vw;
+    margin-left: 8.6vw;
   }
 
 

@@ -1,14 +1,20 @@
-import { Navigate } from "react-router-dom";
+import React from 'react';
+import { Navigate } from 'react-router-dom';
+import { jwtDecode } from 'jwt-decode';
 
 const PrivateRoute = ({ children }) => {
-  const token = localStorage.getItem('token');
-  
+  const token = localStorage.getItem('token')
   if (!token) {
-    console.log('Geen token gevonden, doorverwijzen naar login...');  // Check of dit wordt gelogd
-    return <Navigate to="/login" replace />;  // Voeg 'replace' toe om geschiedenis te vervangen
+    return <Navigate to="/login" />
   }
 
-  return children;
-};
+  try {
+    return children
+  }
+   
+  catch (error) {
+    return <Navigate to="/login" />
+  }
+}
 
 export default PrivateRoute;

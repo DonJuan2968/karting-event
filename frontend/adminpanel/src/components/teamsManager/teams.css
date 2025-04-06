@@ -1,0 +1,108 @@
+.content-teams-container {
+    min-height: 100vh;
+    margin-top: 10vh;
+    width: 100%;
+}
+
+.teams-titel {
+    text-align: left;
+    margin-bottom: 5vh;
+    font-size: 25px;
+    font-weight: 700;
+    color: #2b2b2b;
+}
+
+.teams-titel h2 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.teams-titel p {
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 0.3vh;
+    color: #2b2b2b;
+}
+.row-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.select-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.select-container select {
+    margin-bottom: 10px;
+    padding: 5px;
+    background-color: #e8e8e8;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    color: #2b2b2b;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 200px;
+}
+
+.team-select-container {
+    margin-bottom: 2vh;
+    padding: 10px;
+    background-color: #e8e8e8;
+    border-radius: 5px;
+    width: 200px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+    min-height: 225px;
+    color: #2b2b2b;
+    font-size: 18px;
+}
+
+.select1 {
+    margin-bottom: 1.5vh;
+}
+
+.bewerk-teams-container {
+    margin-left: 5vw;
+    margin-top: 8vh;
+    display: flex;
+    flex-direction: row;
+    gap: 5vw;
+    justify-content: center;
+    text-align: center;
+}
+
+.team {
+    min-width: 350px;
+    max-height: 400px;
+    padding: 10px;
+    background-color: #e8e8e8;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    color: #2b2b2b;
+    font-size: 18px;
+}
+
+.teams-button {
+    margin-left: 62vw;
+    margin-top: -8vh;
+    display: flex;
+}
+
+.teams-button button {
+    padding: 5px 10px;
+    background-color: #e8e8e8;
+    color: #2b2b2b;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+.teams-button button:hover {
+    transform:scale(1.03);
+}

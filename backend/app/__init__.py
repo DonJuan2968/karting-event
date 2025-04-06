@@ -1,7 +1,8 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from config.config import Config
-from flask_cors import CORS  # Importeer CORS
+from flask_cors import CORS
+from flask_jwt_extended import JWTManager  # JWT importeren
 
 db = SQLAlchemy()
 
@@ -10,13 +11,23 @@ def create_app():
     app.config.from_object(Config)
     db.init_app(app)
     
-    CORS(app, resources={r"/*": {"origins": "http://localhost:5173"}}) 
+    allowed_origins = [
+        "http://localhost:5173",
+        "http://localhost:5174"
+    ]
 
-    # Importeert routes
+    cors = CORS(app, resources={r"/*": {"origins": allowed_origins}}, supports_credentials=True, methods=["GET", "POST", "PUT", "DELETE", "OPTIONS"])
+
+    # JWT configureren gebruikt SECRET_KEY van mijn config
+    jwt = JWTManager(app)
+
+    # Importeer en registreer routes
     with app.app_context():
-        from app.routes import main
-        
+        from app.routes import main # website-routes
+        from app.admin.admin_routes import admin_bp  # Admin-routes
 
-        app.register_blueprint(main)
+        # Blueprints registreren
+        app.register_blueprint(main) # website blueprint
+        app.register_blueprint(admin_bp) # Admin Blueprint
     
     return app

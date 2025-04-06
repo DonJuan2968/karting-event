@@ -2,13 +2,16 @@ import './register.css';
 import { useState } from 'react';
 
 import background from '../../assets/inbackground.png'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUser, faEnvelope, faIdCard } from '@fortawesome/free-solid-svg-icons';
 
 const Register = () => {
+
     const [formData, setFormData] = useState({
         name: '',
         email: '',
         leerlingnummer: '',
-        honeypot: '' // Voeg hier het honeypot-veld toe
+        honeypot: '',
     });
 
     const [message, setMessage] = useState('');
@@ -22,7 +25,7 @@ const Register = () => {
         e.preventDefault();
 
         try {
-            const response = await fetch('http://127.0.0.1:5000/inschrijvingen', {
+            const response = await fetch('http://127.0.0.1:5000/api/inschrijvingen', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -67,36 +70,45 @@ const Register = () => {
                     <h2>Inschrijven</h2>
                     <div className="form-group">
                         <label htmlFor="name">Naam:</label>
-                        <input
-                            type="text"
-                            id="name"
-                            value={formData.name}
-                            onChange={handleInputChange}
-                            placeholder="Voer je (voor en achternaam) in"
-                            required
-                        />
+                        <div className="input-icon">
+                            <FontAwesomeIcon icon={faUser} />
+                            <input
+                                type="text"
+                                id="name"
+                                value={formData.name}
+                                onChange={handleInputChange}
+                                placeholder="Voer je (voor en achternaam) in"
+                                required
+                            />
+                        </div>
                     </div>
                     <div className="form-group">
                         <label htmlFor="email">Email:</label>
-                        <input
-                            type="email"
-                            id="email"
-                            value={formData.email}
-                            onChange={handleInputChange}
-                            placeholder="Voer je (VISTA E-mail) in"
-                            required
-                        />
+                        <div className="input-icon">
+                        <FontAwesomeIcon icon={faEnvelope} />
+                            <input
+                                type="email"
+                                id="email"
+                                value={formData.email}
+                                onChange={handleInputChange}
+                                placeholder="Voer je (VISTA E-mail) in"
+                                required
+                            />
+                        </div>
                     </div>
                     <div className="form-group">
                         <label htmlFor="leerlingnummer">Leerlingnummer:</label>
-                        <input
-                            type="number"
-                            id="leerlingnummer"
-                            value={formData.leerlingnummer}
-                            onChange={handleInputChange}
-                            placeholder="Voer je leerlingnummer in"
-                            required
-                        />
+                        <div className="input-icon">
+                        <FontAwesomeIcon icon={faIdCard} />
+                            <input
+                                type="number"
+                                id="leerlingnummer"
+                                value={formData.leerlingnummer}
+                                onChange={handleInputChange}
+                                placeholder="Voer je leerlingnummer in"
+                                required
+                            />
+                        </div>
                     </div>
                     {/* Honeypot */}
                     <input

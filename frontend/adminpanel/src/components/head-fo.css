@@ -1,0 +1,98 @@
+
+header {
+    position: fixed;
+    min-width: 100%;
+    padding: 5px 20px;
+    background-color: #2b2b2b;
+    color: #f1f1f1;
+    z-index: 2;
+}
+
+nav {
+    display: flex;
+    min-width: 100%;
+    align-items: center;
+    gap: 40px;
+    position: relative;
+}
+
+.naam {
+    margin-left: 1vw;
+    color: #f1f1f1;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.logout-container {
+    margin-left: auto;
+    float: right;
+    margin-right: 1vw;
+}
+
+.logout-container img {
+    color: #f1f1f1;
+   
+}
+
+a {
+    text-decoration: none;
+    color: #f1f1f1;
+}
+
+.naam:hover, header a:hover, .hamburger img:hover {
+    color: #ccc;
+}
+
+.hamburger img {
+  cursor: pointer;
+}
+
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #2b2b2b;
+    overflow-x: hidden;
+    transition: 0.4s;
+  }
+  
+  .overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #f1f1f1;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .overlay a:hover, .overlay a:focus {
+    color: #ccc;
+  }
+  
+  .overlay .closebtn {
+    position: absolute;
+    top: 2px;
+    right: 0px;
+    font-size: 40px;
+    cursor: pointer;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+    }
+  }

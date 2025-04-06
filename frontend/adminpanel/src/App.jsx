@@ -9,45 +9,37 @@ import TeamsManager from './pages/teamsManager';
 
 function App() {
   return (
-    <Router>
-      <div>
-        <Routes>
-          <Route path="/login" element={<LoginPage />} />
-          <Route
-            path="/"
-            element={
-              // <PrivateRoute>
-                <Dashboard />
-              // </PrivateRoute>
-            }
-          />
-          <Route
-            path="/content"
-            element={
-              //<PrivateRoute>
-                <ContentManager />
-              //</PrivateRoute>
-            }
-          />
-          <Route
-            path="/users"
-            element={
-              //<PrivateRoute>
-                <UsersManager />
-              //</PrivateRoute>
-            }
-          />
-          <Route
-            path="/teams" 
-            element={
-            //<PrivateRoute>
-              <TeamsManager />
-            //</PrivateRoute>
-        } 
-        />
-        </Routes>
-      </div>
-    </Router>
+      <Router>
+        <div>
+          <Routes>
+            <Route path="/login" element={<LoginPage />} />
+            <Route path="/"
+              element={
+                <PrivateRoute>
+                  <Dashboard />
+                </PrivateRoute>
+              }/>
+            <Route path="/content"
+              element={
+                <PrivateRoute>
+                  <ContentManager />
+                </PrivateRoute>
+              }/>
+            <Route path="/users"
+              element={
+                <PrivateRoute>
+                  <UsersManager />
+                </PrivateRoute>
+              }/>
+            <Route path="/teams" 
+              element={
+              <PrivateRoute>
+                <TeamsManager />
+              </PrivateRoute>
+          } />
+          </Routes>
+        </div>
+      </Router>
   );
 }
 

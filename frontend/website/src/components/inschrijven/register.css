@@ -1,109 +1,120 @@
-  
+.container-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+}
+
+.image-left img {
+  margin-bottom: -7px;
+  max-height: 421px;
+  width: 100%;
+  height: auto;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+}
+
+.inschrijf-form {
+  background-color: white;
+  padding: 30px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  min-height: 420px;
+}
+
+.inschrijf-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding-left: 35px; /* Extra ruimte voor het icoon */
+}
+
+.input-icon {
+  position: relative;
+}
+
+.input-icon svg {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888; /* Icoonkleur */
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #2b2b2b;
+  color: #f1f1f1;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  transform: scale(1.03);
+  color: #b7b7b7;
+}
+
+@media (max-width: 768px) {
+  .inschrijf-form {
+    margin-top: 15vh;
+    padding: 20px;
+    max-width: 80%;
+    border-radius: 10px;
+  }
+
+  .submit-btn {
+    font-size: 16px;
+  }
+
   .container-form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 90vh;
+    flex-direction: column-reverse;
   }
 
   .image-left img {
-    margin-bottom: -7px;
-    max-height: 421px;
-    width: 100%;
-    height: auto;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+    max-width: 80%;
+    border-radius: 10px;
   }
-  
-  .inschrijf-form {
-    background-color: white;
-    padding: 30px;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 400px;
-    min-height: 420px;
-  }
-  
-  .inschrijf-form h2 {
+
+  .image-left {
+    margin: 10px auto;
     text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .form-group {
-    margin-bottom: 15px;
-  }
-  
-  .form-group label {
-    display: block;
-    margin-bottom: 5px;
-  }
-  
-  .form-group input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  .submit-btn {
-    width: 100%;
-    padding: 10px;
-    background-color: #2b2b2b;
-    color: #f1f1f1;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .submit-btn:hover {
-    transform: scale(1.03);
-    color: #b7b7b7;
-  }
-  
-  @media (max-width: 768px) {
-    .inschrijf-form {
-      margin-top: 15vh;
-      padding: 20px;
-      max-width: 80%;
-      border-radius: 10px;
-    }
-  
-    .submit-btn {
-      font-size: 16px;
-    }
-
-    .container-form {
-      flex-direction: column-reverse;
-    }
-
-    .image-left img {
-      max-width: 80%;
-      border-radius: 10px;
-    }
-
-    .image-left {
-      margin: 10px auto;
-      text-align: center;
-    }
-
-    .mobile {
-      margin-top: 10px;
-    }
-
-    .desktop {
-      display: none;
-    }
   }
 
-  @media (min-width: 768px) {
-    .mobile {
-      display: none;
-    }
+  .mobile {
+    margin-top: 10px;
   }
 
+  .desktop {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .mobile {
+    display: none;
+  }
+}
 
 .message-container {
   display: none;
@@ -122,5 +133,3 @@
   color: #2b2b2b; /* Pas de tekstkleur aan naar wens */
   text-align: center; /* Centreer de tekst */
 }
-
-  

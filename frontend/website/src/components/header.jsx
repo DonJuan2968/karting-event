@@ -9,13 +9,12 @@ import { faCircleXmark } from '@fortawesome/free-regular-svg-icons';
 import '../components/head-fo.css';
 
 //! niet zomaar veranderen
-//* testen haslink via andere pagina's
 const Header = () => {
     return (
         <header>
             <nav>
                 <div className="title-header-container">
-                    <Link to="/#">
+                    <Link to="/">
                         <div className="titel-header">
                             <img src="src/assets/go-kart.png" alt="go-kart" width={60} height={50}/>
                             <div className="lijn">

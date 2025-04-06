@@ -10,3 +10,11 @@ body {
   max-width: 100%;
   background-color: #f1f1f1;
 }
+
+.center-container {
+  display: flex;
+  height: 100vh;
+  margin: 0 auto;
+  max-width: 70%;
+  /* background-color: #eceaea; */
+}

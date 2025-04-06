@@ -8,9 +8,7 @@ const LoginPage = () => {
 
     return (
         <div>
-            <Header />
             <Login />
-            <Footer />
         </div>
     )
 }

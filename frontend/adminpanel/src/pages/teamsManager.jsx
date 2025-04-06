@@ -1,7 +1,6 @@
 // import components
 import Header from "../components/header"
 import Teams from "../components/teamsManager/teams"
-import Footer from "../components/footer"
 
 
 const TeamsManager = () => {
@@ -9,8 +8,9 @@ const TeamsManager = () => {
     return (
         <div>
             <Header />
-            <Teams />
-            <Footer />
+            <div className="center-container">
+                <Teams />
+            </div>
         </div>
     )
 }

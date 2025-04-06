@@ -9,9 +9,9 @@ main = Blueprint('main', __name__)
 
 @main.route('/')
 def home():
-    return "Server running"
+    return "API running"
 
-@main.route('/inschrijvingen', methods=['POST'])
+@main.route('/api/inschrijvingen', methods=['POST'])
 def create_user():
     data = request.get_json()
     username = data.get('username')
@@ -53,13 +53,13 @@ def create_user():
     db.session.add(new_user)
     db.session.commit()
 
-    create_teams()
+    create_teams() 
     
     return jsonify({'message': 'User created successfully'}), 201
 
 
 
-@main.route('/teams', methods=['GET'])
+@main.route('/api/teams', methods=['GET'])
 def get_teams():
     teams = Teams.query.all()  # Haal alle teams op
     result = []
