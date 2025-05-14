@@ -146,8 +146,8 @@ karting-event/
 
 4. Stel de omgevingsvariabelen in:
 
-   - Kopieer `.env.example` naar `.env`
-   - Werk de database URL en secret key bij
+   - Maak een ENV
+   - zet daar je link naar de DB
 
 5. Initialiseer de database:
 
